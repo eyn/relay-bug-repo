@@ -1,0 +1,14 @@
+interface Node {
+  id: ID!
+}
+
+type TestResponse implements Node {
+  id: ID!
+  text: String
+  date: String
+}
+
+type Query {
+  hello(id: ID!): TestResponse
+  node(id: ID!): Node
+}
